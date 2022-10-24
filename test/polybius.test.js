@@ -1,6 +1,8 @@
 const {polybius} = require("../src/polybius")
 const {expect} = require("chai")
 
+
+
 describe("polybius()", () =>{
     describe("Error Handling", () => {
         it("should return false if there are not an even number of characters in the string, excluding spaces, when decoding", () => { 

@@ -1,18 +1,6 @@
 const {substitution} = require("../src/substitution")
 const {expect} = require("chai")
-// Write your tests here!
 
-
-//3 paramaters: input(text to be encoded/decoded) ; 
-//              alphabet(substitution alphabet); 
-//              encode(endocde or deocde; default=true)
-//
-//
-//input could include spaces and letters as well as special characters
-//spaces should be maintained throughout
-//capital letters ignored
-//alphabet parametr must be a string of exactly 26 characters, whcih could include special characters, otherwise it should return false
-//all the characters in the alphabet parameter must be unique otherwise it should return false
 
 
 describe("substitution()", () => {    
