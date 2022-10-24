@@ -15,15 +15,15 @@ const polybiusModule = (function () {
     if(encode === false) {
       let output = "";
       // return false if decoding and string length is not an even number
-      const noSpaces = input.replaceAll(` `, ``);   //remove all spaces
+      const noSpaces = input.replace(/ /g, ``);   //remove all spaces (cannot use .replaceAll on qualified so using the global flag with .replace as workaround)
       if (noSpaces.length % 2 != 0) {   //if what is left is an even length it will not have a remainder when divided by 2; if it does it is not even -> return false
       return false;
       } else {
-        let doubleSpace = input.replaceAll(` `, `  `); //replace all spaces with double spaces to keep a consistency of each 2digits being a number code
-        for (let i = 0; i < doubleSpace.length-1; i++) {
-          if (i % 2 == 0) {   //look at only the even numbers to be able to make double digit keys
-            let number = doubleSpace[i];    //key number position 1
-            let number2 = doubleSpace[i+1]; //key number position 2
+        const doubleSpace = input.replace(/ /g, `  `); //replace all spaces with double spaces to keep a consistency of each 2digits being a number code
+        for (let idx = 0; idx < doubleSpace.length-1; idx++) {
+          if (idx % 2 == 0) {   //look at only the even numbers to be able to make double digit keys
+            let number = doubleSpace[idx];    //key number position 1
+            let number2 = doubleSpace[idx+1]; //key number position 2
             let theNumber = number + number2; //key
             let out = decodeAlpha[theNumber];
             output += out;
@@ -37,8 +37,8 @@ const polybiusModule = (function () {
       
       let output = "";
         const lowerCase = input.toLowerCase();    // ignore uppercase letters
-        for (let i = 0; i < lowerCase.length; i++) {
-          let letter = lowerCase[i];    //Find the matching key and add the appropriate value to the output string
+        for (let idx = 0; idx < lowerCase.length; idx++) {
+          let letter = lowerCase[idx];    //Find the matching key and add the appropriate value to the output string
           let out = encodeAlpha[letter];
           output += out;
         }

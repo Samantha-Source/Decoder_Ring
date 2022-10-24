@@ -21,7 +21,6 @@
 
 
 const caesarModule = (function () {
-  // you can add any code you want within this function scope
 
   function caesar(input, shift, encode = true) {
     
@@ -35,8 +34,8 @@ const caesarModule = (function () {
     const inputLC = input.toLowerCase();    //set all letters in input to lower case
     const arrayIn = inputLC.split("");       //puts all characters into an array
 
-    let numericalValue = [];               //changes each letter in the array to its numerical value
-    let anotherVar = arrayIn.forEach((let)=>{
+    let numericalValue = [];               //make an array of the numerical value for each letter
+    const anotherVar = arrayIn.forEach((let)=>{
       numericalValue.push(let.charCodeAt(0));
     });
 
@@ -57,7 +56,7 @@ const caesarModule = (function () {
       }
     });
 
-    //changes from numberical values back into alphanumeric
+    //changes from numerical values back into alphanumeric
     let output = ""
     modedValue.forEach((char)=>{
       output += String.fromCharCode(char);
