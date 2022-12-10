@@ -1,7 +1,5 @@
-# Project-_Decoder_ring-Samantha_Brown-Solution
+# Decoder Ring
+## Author Samantha Brown
 
-## **Thinkful Module 12 Capstone**
+###Special thanks to Saurabh Dahal - this wouldn't have been possible without him!
 
-Author Samantha Brown
-
-Special thanks to Saurabh Dahal for teaching me so much - this wouldn't have been possible without him!
